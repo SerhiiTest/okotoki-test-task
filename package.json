@@ -1,0 +1,15 @@
+{
+    "name": "okotoki-test-task",
+    "type": "module",
+    "scripts": {
+        "build": "tsc",
+        "dev": "tsc --watch",
+        "start": "node ./server/simple_server.js"
+    },
+    "dependencies": {
+        "express": "^5.1.0"
+    },
+    "devDependencies": {
+        "typescript": "^5.9.2"
+    }
+}
