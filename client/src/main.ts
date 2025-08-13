@@ -165,8 +165,8 @@ function renderLoop(gl: WebGL2RenderingContext, canvas: HTMLCanvasElement){
     gl.useProgram(graphShader.program);
     gl.uniform2f(graphShader.canvasSize, canvas.width, canvas.height);
     
-    gl.uniform2f(graphShader.position, 500,350);
-    gl.uniform2f(graphShader.scale, 500,350);
+    gl.uniform2f(graphShader.position, canvas.width/2,canvas.width*0.35);
+    gl.uniform2f(graphShader.scale, canvas.width/2,canvas.width*0.35);
 
 
     gl.uniform1i(graphShader.graphData, 0);
@@ -184,8 +184,10 @@ function renderLoop(gl: WebGL2RenderingContext, canvas: HTMLCanvasElement){
     gl.activeTexture(gl.TEXTURE1);
     gl.uniform2f(textShader.canvasSize, canvas.width, canvas.height);
     
-    gl.uniform2f(textShader.position, 40,800);
-    gl.uniform2f(textShader.scale, 100,100);
+
+    gl.uniform2f(textShader.position, canvas.width*0.04,canvas.width*0.8);
+    gl.uniform2f(textShader.scale, canvas.width*0.1,canvas.width*0.1);
+    
     gl.uniform1i(textShader.atlas, 1);
     
     gl.uniform1f(textShader.threshold, 0.45);
